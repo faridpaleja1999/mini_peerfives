@@ -2,8 +2,8 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { RewardHistory } from "./rewardHistory";
 
 @Entity()
-export class User{
-  @PrimaryGeneratedColumn('uuid')
+export class User {
+  @PrimaryGeneratedColumn("uuid")
   id!: string;
 
   @Column("varchar", { length: 255 })
