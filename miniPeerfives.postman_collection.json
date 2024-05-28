@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "123fa0b1-62c8-48cf-9497-fde0f5c5f5fc",
+		"name": "miniPeerfives",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12620546",
+		"_collection_link": "https://interstellar-meadow-380264.postman.co/workspace/seHalo-Workspace~ff4d47e9-11bc-4be0-ac73-bff378f1d6e8/collection/12620546-123fa0b1-62c8-48cf-9497-fde0f5c5f5fc?action=share&source=collection_link&creator=12620546"
+	},
+	"item": [
+		{
+			"name": "getUserList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"milind\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"milind kumar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/user/edit/90c2869b-852b-4465-bb90-8e653980847d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"user",
+						"edit",
+						"90c2869b-852b-4465-bb90-8e653980847d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sharePoints",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"givenTo\" : \"90c2869b-852b-4465-bb90-8e653980847d\",\r\n    \"points\" : 75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/point/d3d5ae50-6d4a-40d7-bc3a-16b711bb3822/rewards/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"point",
+						"d3d5ae50-6d4a-40d7-bc3a-16b711bb3822",
+						"rewards",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/point/d3d5ae50-6d4a-40d7-bc3a-16b711bb3822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"point",
+						"d3d5ae50-6d4a-40d7-bc3a-16b711bb3822"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRewardHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/point/90c2869b-852b-4465-bb90-8e653980847d/rewards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"point",
+						"90c2869b-852b-4465-bb90-8e653980847d",
+						"rewards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPointsHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/point/90c2869b-852b-4465-bb90-8e653980847d/p5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"point",
+						"90c2869b-852b-4465-bb90-8e653980847d",
+						"p5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Trasaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/point/90c2869b-852b-4465-bb90-8e653980847d/delete/3298f18f-e239-4116-b645-928d5cf03d6d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"point",
+						"90c2869b-852b-4465-bb90-8e653980847d",
+						"delete",
+						"3298f18f-e239-4116-b645-928d5cf03d6d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
