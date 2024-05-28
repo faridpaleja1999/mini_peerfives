@@ -68,3 +68,29 @@ export const editUser = async (req: Request, res: Response) => {
     });
   }
 };
+
+
+export const getUser = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const userRepo = AppDataSource.getRepository(User);
+    let userData = await userRepo.findOne({ where: { id } });
+    if (!userData) {
+      return res.status(404).json({
+        success: true,
+        message: "User not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Successfully got the user record",
+      data: userData,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error" ,
+    });
+  }
+};

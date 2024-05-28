@@ -19,8 +19,6 @@ const typeormConfig = {
   username: MYSQL_USER,
   password: MYSQL_PASSWORD,
   database: MYSQL_DB,
-  // logging: ["error", "log"],
-  // logging: true,
   synchronize: true, //keep true just for development
   entities: [`${baseFolder}/models/*{.js,.ts}`],
   migrations: [],

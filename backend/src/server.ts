@@ -1,4 +1,5 @@
 import express, { Express } from "express";
+import cors from 'cors'
 import { PORT } from "./config/config";
 import Database from "./database/dbConnection";
 import indexRoute from "./routes/index";
@@ -6,6 +7,8 @@ import indexRoute from "./routes/index";
 const database = new Database();
 const app: Express = express();
 const port = PORT || 8000;
+
+app.use(cors());
 
 app.use(express.json());
 
@@ -34,7 +37,7 @@ app.listen(port, async () => {
 
 process.on("SIGINT", async () => {
   console.info("Gracefully shutting down");
-  // await database.disConnect();
+  await database.disConnect();
   console.info("MySql Database Disconnected");
   process.exit(0);
 });
